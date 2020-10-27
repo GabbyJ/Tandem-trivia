@@ -1,8 +1,8 @@
-# Project Description:
+# Project Description
 
 Create an application that displays trivia questions with multiple-choice answers to select from. At minimum, the player can view the question(s), the answer choices, the correct answer upon submission, and their score. Feel free to use whatever framework or language you are comfortable with.
 
-## Assumptions:
+## Assumptions
 
 <ul>
     <li>A round of trivia has 10 Questions</li>
@@ -12,22 +12,27 @@ Create an application that displays trivia questions with multiple-choice answer
     <li>We will provide you with the trivia data such as the questions, correct and incorrect answers via a JSON file.</li>
 </ul>
 
-## AC:
+## AC
 
 - [ ] A user can view questions.
 - [ ] Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
 - [ ] A user can select only 1 answer out of the 4 possible answers.
-- [ ] The correct answer must be revealed after a user has submitted their answer A user can see the score they received at the end of the round
+- [ ] The correct answer must be revealed after a user has submitted their answer A user can see the score they received at the end of the round<br/>
 **Bonus**
 - [ ] Add unit tests
 
-# Dependencies Used:
-# How to Run:
+# Dependencies Used
+
+TBD...
+
+# How to Run
+
+TBD...
 <!-- ## Issues/Complexities to look out for:
 # Potential new features to make it better: -->
 
 <details>
-    <summary># Getting Started with Create React App</summary>
+    <summary>**Getting Started with Create React App**</summary>
 
     This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
