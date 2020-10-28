@@ -2,6 +2,8 @@
 
 Create an application that displays trivia questions with multiple-choice answers to select from. At minimum, the player can view the question(s), the answer choices, the correct answer upon submission, and their score. Feel free to use whatever framework or language you are comfortable with.
 
+Mockup can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4)
+
 ## Assumptions
 
 <ul>
@@ -17,13 +19,18 @@ Create an application that displays trivia questions with multiple-choice answer
 - [ ] A user can view questions.
 - [ ] Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
 - [ ] A user can select only 1 answer out of the 4 possible answers.
-- [ ] The correct answer must be revealed after a user has submitted their answer A user can see the score they received at the end of the round<br/>
+- [ ] The correct answer must be revealed after a user has submitted their answer
+- [ ] A user can see the score they received at the end of the round<br/>
 **Bonus**
 - [ ] Add unit tests
 
 # Dependencies Used
-
+React Icons
 TBD...
+
+# Mockup
+
+https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4
 
 # How to Run
 

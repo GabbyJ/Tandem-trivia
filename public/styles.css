@@ -1,0 +1,47 @@
+/* CLEAR DEFAULT STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+/* CLEAR DEFAULT STYLES */
+
+/* FONT */
+@font-face{
+    font-family: rational;
+    src: url('./Rational-TW-Display/rationaltwtextdemo-light.otf')
+}
+
+@font-face{
+    font-family: rational-bold;
+    src: url('./Rational-TW-Display/rationaltwtextdemo-semibold.otf')
+}
+/* END FONT */
+
+/* COLORS */
+:root{
+    --logoGreen: #717245; /*logo (h1) on offWhite or greenishWhite*/
+    --lightGreen: #E4F2E4; /*buttons on white background, sometimes background with black words*/
+    --greenishWhite: #FBFBF5; /*nav background with logoGreen and black words*/
+    --darkGreen: #2C4023; /*button outlines*/
+    --brightYellow: #FFFF23; /*accent color in random spots*/
+    --red: #F36E5B; /*accent color in random spots*/
+    --offWhite: #FFF4E6; /*background color with black or logoGreen*/
+    --white: #FFFDFC; /*main background*/
+    --black: #333333; /*main words*/
+}
+/* END COLORS */
+
+body{
+    font-family: rational, serif;
+    height: 100vh;
+    background-color: var(--offWhite);
+}
+
+
+h1, h2, h3, h4, h5{
+    font-family: 'Work Sans', sans-serif;
+    color: var(--logoGreen);
+}
