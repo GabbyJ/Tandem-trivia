@@ -2,7 +2,7 @@
 
 Create an application that displays trivia questions with multiple-choice answers to select from. At minimum, the player can view the question(s), the answer choices, the correct answer upon submission, and their score. Feel free to use whatever framework or language you are comfortable with.
 
-My mockup for the challenge can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4).
+My mockup for the challenge can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4). The design is based off of [Tandem's website](https://madeintandem.com).
 
 ## Assumptions
 
