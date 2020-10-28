@@ -11,12 +11,12 @@
 /* FONT */
 @font-face{
     font-family: rational;
-    src: url('./Rational-TW-Display/rationaltwtextdemo-light.otf')
+    src: url('./font/rationaltwtextdemo-light.otf')
 }
 
 @font-face{
     font-family: rational-bold;
-    src: url('./Rational-TW-Display/rationaltwtextdemo-semibold.otf')
+    src: url('./font/rationaltwtextdemo-semibold.otf')
 }
 /* END FONT */
 

@@ -2,7 +2,7 @@
 
 Create an application that displays trivia questions with multiple-choice answers to select from. At minimum, the player can view the question(s), the answer choices, the correct answer upon submission, and their score. Feel free to use whatever framework or language you are comfortable with.
 
-Mockup can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4)
+My mockup for the challenge can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4).
 
 ## Assumptions
 
@@ -25,12 +25,8 @@ Mockup can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP
 - [ ] Add unit tests
 
 # Dependencies Used
-React Icons
+React Icons<br/>
 TBD...
-
-# Mockup
-
-https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4
 
 # How to Run
 
@@ -39,7 +35,7 @@ TBD...
 # Potential new features to make it better: -->
 
 <details>
-    <summary>**Getting Started with Create React App**</summary>
+    <summary>Getting Started with Create React App</summary>
 
     This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
