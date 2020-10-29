@@ -99,6 +99,14 @@ header{
     box-shadow: 0 1px 3px 0 var(--black);
 }
 
+.answers .right{
+    background-color: var(--brightYellow);
+}
+
+.answers .wrong{
+    background-color: var(--red);
+}
+
 footer{
     position: absolute;
     bottom: 0;

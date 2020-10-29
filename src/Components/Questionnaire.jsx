@@ -14,10 +14,10 @@ export default function Questionnaire({handleAnswer, data: {question, correct_an
                 <p dangerouslySetInnerHTML = {{__html: question}}></p>
             </div>
             <div className="answers">
-                <Button onClick={() => handleAnswer(shuffledAnswer[0])} answer={shuffledAnswer[0]}/>
-                <Button onClick={() => handleAnswer(shuffledAnswer[1])} answer={shuffledAnswer[1]}/>
-                <Button onClick={() => handleAnswer(shuffledAnswer[2])} answer={shuffledAnswer[2]}/>
-                <Button onClick={() => handleAnswer(shuffledAnswer[3])} answer={shuffledAnswer[3]}/>
+                <Button className={correct_answer === shuffledAnswer[0] ? "right" : ''} onClick={() => handleAnswer(shuffledAnswer[0])} answer={shuffledAnswer[0]}/>
+                <Button className={correct_answer === shuffledAnswer[1] ? "right" : ''} onClick={() => handleAnswer(shuffledAnswer[1])} answer={shuffledAnswer[1]}/>
+                <Button className={correct_answer === shuffledAnswer[2] ? "right" : ''} onClick={() => handleAnswer(shuffledAnswer[2])} answer={shuffledAnswer[2]}/>
+                <Button className={correct_answer === shuffledAnswer[3] ? "right" : ''} onClick={() => handleAnswer(shuffledAnswer[3])} answer={shuffledAnswer[3]}/>
             </div>
             </section>
         </div>

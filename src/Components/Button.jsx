@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Button({ answer }) {
+export default function Button({ answer, className }) {
     return (
-        <button>{answer}</button>
+        <button className= {`${className}`}>{answer}</button>
     )
 }
