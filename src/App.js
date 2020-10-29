@@ -7,17 +7,24 @@ const TRIVIA = "https://opentdb.com/api.php?amount=10&category=14&difficulty=eas
 
 function App() {
   const [questions, setQuestions] = useState([]);
+  const [currentQuestion, setCurrentQuestion] = useState(undefined)
 
   useEffect(() => {
     fetch(TRIVIA)
     .then((res) => res.json())
     .then((data) => {
       setQuestions(data.results);
+      setCurrentQuestion(data.results[0])
     });
   }, []);
 
   const handleAnswer = (answer) => {
+    setCurrentQuestion(currentQuestion + 1);
     // check for the answer
+
+    //show another question
+
+    //change score if correct
   }
   
 
@@ -25,7 +32,7 @@ function App() {
     <div className="container">
       <Header/>
       {questions.length > 0 ? (
-        <Questionnaire data={questions[0]} handleAnswer={handleAnswer}/>
+        <Questionnaire data={currentQuestion} handleAnswer={handleAnswer}/>
       ) : ( 
         <p className="loading">Loading Questions...</p>
         )
