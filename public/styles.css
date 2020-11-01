@@ -1,138 +1,162 @@
 /* CLEAR DEFAULT STYLES */
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
-  /* CLEAR DEFAULT STYLES */
-  
-  /* FONT */
-  @font-face {
-    font-family: rational;
-    src: url("./font/rationaltwtextdemo-light.otf");
-  }
-  
-  @font-face {
-    font-family: rational-bold;
-    src: url("./font/rationaltwtextdemo-semibold.otf");
-  }
-  /* END FONT */
-  
-  /* COLORS */
-  :root {
-    --logoGreen: #717245; /*logo (h1) on offWhite or greenishWhite*/
-    --lightGreen: #e4f2e4; /*buttons on white background, sometimes background with black words*/
-    --greenishWhite: #fbfbf5; /*nav background with logoGreen and black words*/
-    --darkGreen: #2c4023; /*button outlines*/
-    --brightYellow: #ffff23; /*accent color in random spots*/
-    --red: #f36e5b; /*accent color in random spots*/
-    --offWhite: #fff4e6; /*background color with black or logoGreen*/
-    --white: #fffdfc; /*main background*/
-    --black: #333333; /*main words*/
-  }
-  /* END COLORS */
-  
-  body {
-    font-family: "Courier New", Courier, monospace;
-    background-color: var(--offWhite);
-    color: var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: "Work Sans", sans-serif;
-  }
-  
-  h1 {
-    font-size: 3.2rem;
-  }
-  h2 {
-    font-size: 2.4rem;
-  }
-  h3 {
-    font-size: 1.87rem;
-  }
-  
-  p,
-  button {
-    font-size: 1.5rem;
-  }
-  
-  header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--greenishWhite);
-    color: var(--logoGreen);
-    padding: 4rem;
-    text-align: center;
-  }
-  
-  .question {
-    background-color: var(--lightGreen);
-    padding: 5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px var(--black);
-  }
-  
-  .question p {
-    font-size: 2rem;
-  }
-  
-  .answers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 2rem;
-  }
-  
-  .answers button {
-    background-color: var(--greenishWhite);
-    width: 45%;
-    margin: 2rem 1rem;
-    padding: 2rem;
-    font-weight: bolder;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 var(--black);
-  }
-  
-  .answers .right {
-    background-color: var(--brightYellow);
-  }
-  
-  /* Not in use yet. Change empty class on answers from "" to "wrong" if you want it */
-  .answers .wrong {
-    background-color: var(--red);
-  }
-  
-  footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--greenishWhite);
-    color: var(--logoGreen);
-    font-size: 1.5rem;
-    padding: 4rem;
-    text-align: center;
-  }
-  footer .icon {
-    font-size: 2rem;
-    vertical-align: middle;
-  }
-  
-  /* 
-  Tailwind: p-4 = 1rem = 20px 
-  Me: p-4 = 2rem = 20px
-  */
-  
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+/* CLEAR DEFAULT STYLES */
+
+/* FONT */
+@font-face {
+  font-family: rational;
+  src: url("./font/rationaltwtextdemo-light.otf");
+}
+
+@font-face {
+  font-family: rational-bold;
+  src: url("./font/rationaltwtextdemo-semibold.otf");
+}
+/* END FONT */
+
+/* COLORS */
+:root {
+  --logoGreen: #717245; /*logo (h1) on offWhite or greenishWhite*/
+  --lightGreen: #e4f2e4; /*buttons on white background, sometimes background with black words*/
+  --greenishWhite: #fbfbf5; /*nav background with logoGreen and black words*/
+  --darkGreen: #2c4023; /*button outlines*/
+  --brightYellow: #ffff23; /*accent color in random spots*/
+  --red: #f36e5b; /*accent color in random spots*/
+  --offWhite: #fff4e6; /*background color with black or logoGreen*/
+  --white: #fffdfc; /*main background*/
+  --black: #333333; /*main words*/
+}
+/* END COLORS */
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--offWhite);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.87rem;
+}
+
+p,
+button {
+  font-size: 1.5rem;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--greenishWhite);
+  color: var(--logoGreen);
+  padding: 4rem;
+  text-align: center;
+}
+
+.question {
+  background-color: var(--lightGreen);
+  padding: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px var(--black);
+}
+
+.question p {
+  font-size: 2rem;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.answers button {
+  background-color: var(--greenishWhite);
+  width: 45%;
+  margin: 2rem 1rem;
+  padding: 2rem;
+  font-weight: bolder;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 var(--black);
+}
+
+/* .answers button:hover{
+  background-color: var(--darkGreen);
+  color: var(--greenishWhite);
+} */
+
+.answers .right {
+  color: green;
+  border: 1px solid green;
+}
+
+.answers .wrong {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.next {
+  font-size: 1.8rem;
+  background-color: var(--lightGreen);
+  border: 4px solid var(--darkGreen);
+  border-radius: 0.5rem;
+  width: 45%;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  font-weight: bolder;
+  box-shadow: 0 1px 3px 0 var(--black);
+  display: flex;
+  justify-content: center;
+}
+
+.next:hover {
+  background-color: var(--darkGreen);
+  color: var(--lightGreen);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--greenishWhite);
+  color: var(--logoGreen);
+  font-size: 1.5rem;
+  padding: 4rem;
+  text-align: center;
+}
+footer .icon {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+/* 
+Tailwind: p-4 = 1rem = 20px 
+Me: p-4 = 2rem = 20px
+*/

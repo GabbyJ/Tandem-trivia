@@ -1,8 +1,8 @@
 // TO DO, FIX, UPDATE
 // 1. Randomize questions within the 10 of 20 but don't let repeat
-//2. Remove color from right answer
-//2a. Show color after guess
-//3. Update button key prop
+// 2. Update button key prop
+// 3. Stop answer order from changing after click
+// 4. Fix layout movement when "next Question" button pops up
 
 import React, { useState, useEffect } from "react";
 import Header from "./Components/Header";
@@ -13,6 +13,7 @@ export default function App() {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [showAnswers, setShowAnswers] = useState(false);
 
   useEffect(() => {
     fetch("/Apprentice_TandemFor400_Data.json")
@@ -23,13 +24,20 @@ export default function App() {
   }, []);
 
   const handleAnswer = (answer) => {
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex);
-
-    if (answer === questions[currentIndex].correct) {
-      //increase the score if correct
-      setScore(score + 1);
+    if (!showAnswers) {
+      //prevent double guess
+      if (answer === questions[currentIndex].correct) {
+        setScore(score + 1);
+      }
     }
+
+    setShowAnswers(true);
+  };
+
+  const handelNextQuestion = () => {
+    setShowAnswers(false);
+
+    setCurrentIndex(currentIndex + 1);
   };
 
   return (
@@ -40,7 +48,9 @@ export default function App() {
       ) : questions.length > 0 ? (
         <Questionnaire
           data={questions[currentIndex]}
+          showAnswers={showAnswers}
           handleAnswer={handleAnswer}
+          handelNextQuestion={handelNextQuestion}
         />
       ) : (
         <p>Loading Questions...</p>
