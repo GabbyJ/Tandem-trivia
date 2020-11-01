@@ -1,4 +1,5 @@
-Live site [hosted on Netlify](https://tandem-trivia-gj.netlify.app)
+Live site [hosted on Netlify](https://tandem-trivia-gj.netlify.app).
+Built with React and CSS.
 
 ## Project Description
 
@@ -8,11 +9,11 @@ My mockup for the challenge can be found [here via Canva](https://www.canva.com/
 
 ### AC
 
-- [ X ] A user can view questions.
-- [ X ] Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
-- [ X ] A user can select only 1 answer out of the 4 possible answers.
-- [ X ] The correct answer must be revealed after a user has submitted their answer
-- [ X ] A user can see the score they received at the end of the round<br/>
+- [X] A user can view questions.
+- [X] Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
+- [X] A user can select only 1 answer out of the 4 possible answers.
+- [X] The correct answer must be revealed after a user has submitted their answer
+- [X] A user can see the score they received at the end of the round<br/>
 **Bonus**
 - [ ] Add unit tests
 
