@@ -1,8 +1,7 @@
 // TO DO, FIX, UPDATE
 // 1. Randomize questions within the 10 of 20 but don't let repeat
-// 2. Update button key prop
-// 3. Stop answer order from changing after click
-// 4. Fix layout movement when "next Question" button pops up
+// 2. Fix layout movement when "next Question" button pops up
+// 3. Properly style Score display
 
 import React, { useState, useEffect } from "react";
 import Header from "./Components/Header";
@@ -19,7 +18,17 @@ export default function App() {
     fetch("/Apprentice_TandemFor400_Data.json")
       .then((res) => res.json())
       .then((data) => {
-        setQuestions(data.trivia); //.trivia changes on json name
+        //stop answers from re-rendering after click
+        const questions = data.trivia.map((question) => //.trivia changes on json name
+        ({
+          ...question,
+          answers: [
+            question.correct,
+            ...question.incorrect,
+          ].sort(() => Math.random() - 0.5),
+        }))
+
+        setQuestions(questions);
       });
   }, []);
 

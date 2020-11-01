@@ -4,19 +4,16 @@ export default function Questionnaire({
   showAnswers,
   handleAnswer,
   handelNextQuestion,
-  data: { question, correct, incorrect }
+  data: { question, correct, answers }
 }) {
-  const shuffledAnswers = [correct, ...incorrect].sort(
-    () => Math.random() - 0.5
-  );
-
+  
   return (
     <section className="trivia">
       <div className="question">
         <p>{question}</p>
       </div>
       <div className="answers">
-        {shuffledAnswers.map((answer) => {
+        {answers.map((answer, idx) => {
           const textColor = showAnswers
             ? answer === correct
               ? "right"
@@ -24,7 +21,7 @@ export default function Questionnaire({
             : "";
           return (
             <button
-              key={Math.random(20)} //update later for proper keys (just removing console warning for now)
+              key={idx}
               className={`${textColor}`}
               onClick={() => handleAnswer(answer)}
             >
