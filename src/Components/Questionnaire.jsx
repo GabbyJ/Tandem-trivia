@@ -1,11 +1,10 @@
 import React from "react";
-import Button from "./Button";
 
 export default function Questionnaire({
   handleAnswer,
   data: { question, correct, incorrect }
 }) {
-  const shuffledAnswer = [correct, ...incorrect].sort(
+  const shuffledAnswers = [correct, ...incorrect].sort(
     () => Math.random() - 0.5
   );
 
@@ -15,26 +14,15 @@ export default function Questionnaire({
         <p>{question}</p>
       </div>
       <div className="answers">
-        <Button
-          className={correct === shuffledAnswer[0] ? "right" : ""}
-          onClick={() => handleAnswer(shuffledAnswer[0])}
-          answer={shuffledAnswer[0]}
-        />
-        <Button
-          className={correct === shuffledAnswer[1] ? "right" : ""}
-          onClick={() => handleAnswer(shuffledAnswer[1])}
-          answer={shuffledAnswer[1]}
-        />
-        <Button
-          className={correct === shuffledAnswer[2] ? "right" : ""}
-          onClick={() => handleAnswer(shuffledAnswer[2])}
-          answer={shuffledAnswer[2]}
-        />
-        <Button
-          className={correct === shuffledAnswer[3] ? "right" : ""}
-          onClick={() => handleAnswer(shuffledAnswer[3])}
-          answer={shuffledAnswer[3]}
-        />
+        {shuffledAnswers.map((answer) => (
+          <button
+            key={Math.random(20)} //update later for proper keys (just removing console warning for now)
+            className={correct === answer ? "right" : ""}
+            onClick={() => handleAnswer(answer)}
+          >
+            {answer}
+          </button>
+        ))}
       </div>
     </section>
   );

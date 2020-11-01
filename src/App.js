@@ -5,18 +5,24 @@ import Footer from "./Components/Footer";
 import Questionnaire from "./Components/Questionnaire";
 
 export default function App() {
-  const [questions, SetQuestions] = useState([]);
+  const [questions, setQuestions] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     fetch("/Apprentice_TandemFor400_Data.json")
       .then((res) => res.json())
       .then((data) => {
-        SetQuestions(data.trivia); //.data changes on json name
+        setQuestions(data.trivia); //.trivia changes on json name
       });
   }, []);
 
   const handleAnswer = (answer) => {
-    //check for the answer
+    setCurrentIndex(currentIndex + 1);
+    // check for the answer
+
+    // show another question
+
+    //change score if correct
   };
 
   return (
@@ -24,7 +30,10 @@ export default function App() {
       <Header />
 
       {questions.length > 0 ? (
-        <Questionnaire data={questions[0]} handleAnswer={handleAnswer} />
+        <Questionnaire
+          data={questions[currentIndex]}
+          handleAnswer={handleAnswer}
+        />
       ) : (
         <p>Loading Questions...</p>
       )}
