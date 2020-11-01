@@ -17,7 +17,7 @@ export default function Questionnaire({
         {shuffledAnswers.map((answer) => (
           <button
             key={Math.random(20)} //update later for proper keys (just removing console warning for now)
-            className={correct === answer ? "right" : ""}
+            className={correct === answer ? "right" : ""} //remove so answer isn't shown
             onClick={() => handleAnswer(answer)}
           >
             {answer}
