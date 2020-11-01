@@ -1,10 +1,23 @@
-# Project Description
+Live site [hosted on Netlify](https://tandem-trivia-gj.netlify.app)
+
+## Project Description
 
 Create an application that displays trivia questions with multiple-choice answers to select from. At minimum, the player can view the question(s), the answer choices, the correct answer upon submission, and their score. Feel free to use whatever framework or language you are comfortable with.
 
 My mockup for the challenge can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4). The design is based off of [Tandem's website](https://madeintandem.com).
 
-## Assumptions
+### AC
+
+- [ X ] A user can view questions.
+- [ X ] Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
+- [ X ] A user can select only 1 answer out of the 4 possible answers.
+- [ X ] The correct answer must be revealed after a user has submitted their answer
+- [ X ] A user can see the score they received at the end of the round<br/>
+**Bonus**
+- [ ] Add unit tests
+
+
+### Assumptions
 
 <ul>
     <li>A round of trivia has 10 Questions</li>
@@ -14,25 +27,24 @@ My mockup for the challenge can be found [here via Canva](https://www.canva.com/
     <li>We will provide you with the trivia data such as the questions, correct and incorrect answers via a JSON file.</li>
 </ul>
 
-## AC
+## Dependencies Used
+- React Icons
 
-- [ ] A user can view questions.
-- [ ] Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
-- [ ] A user can select only 1 answer out of the 4 possible answers.
-- [ ] The correct answer must be revealed after a user has submitted their answer
-- [ ] A user can see the score they received at the end of the round<br/>
-**Bonus**
-- [ ] Add unit tests
 
-# Dependencies Used
-React Icons<br/>
-TBD...
+## How to Run
 
-# How to Run
+Can be viewed [here on Netlify](https://tandem-trivia-gj.netlify.app).
 
-TBD...
-<!-- ## Issues/Complexities to look out for:
-# Potential new features to make it better: -->
+**To Run Locally:**
+- Clone the repo using `git clone https://github.com/GabbyJ/Tandem-trivia.git`
+- Install dependencies with `npm install`
+- Start server with `npm start`
+<!-- ## Issues/Complexities to look out for: -->
+
+## Potential new features to make it better:
+- Add a play again/restart option at the end of game
+
+## 
 
 <details>
     <summary>Getting Started with Create React App</summary>
