@@ -38,13 +38,9 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-color: var(--offWhite);
   color: var(--black);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  overflow-x: hidden;
 }
 
-/* FONT SIZE */
 h1,
 h2,
 h3,
@@ -69,15 +65,22 @@ button {
 }
 /* END FONT SIZE */
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+header{
+  width: 100%;
   background-color: var(--greenishWhite);
   color: var(--logoGreen);
   padding: 4rem;
   text-align: center;
+  min-height: 15vh;
 }
 
 .questionCount {
@@ -89,6 +92,7 @@ header {
   padding: 5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px -1px var(--black);
+  min-width: 50%;
 }
 
 .question p {
@@ -102,6 +106,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 2rem;
+  min-width: 45%;
 }
 
 .answers button {
@@ -166,23 +171,23 @@ header {
   border-radius: 1rem;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+footer{
+  width: 100%;
   background-color: var(--greenishWhite);
   color: var(--logoGreen);
   font-size: 1.5rem;
   padding: 4rem;
   text-align: center;
+  min-height: 10vh;
 }
+
 footer .icon {
   font-size: 2rem;
   vertical-align: middle;
 }
 
 /* DECORATION */
+
 .dot1 {
   height: 50rem;
   width: 50rem;
@@ -200,22 +205,36 @@ footer .icon {
   background-color: var(--red);
   border-radius: 50%;
   position: absolute;
-  top: 40rem;
-  right: -25rem; /*https://support.google.com/chrome/thread/13698121?hl=en*/
+  bottom: 0;
+  right: -25rem;
   z-index: -1;
 }
+
 /* END DECORATION */
 
-/********* TABLET AND LOWER STYLES ************/
-@media only screen and (max-width: 900px) {
-  .container {
+/********* TABLET/MOBILE STYLES ************/
+@media only screen and (max-width: 1100px) {
+  .container{
     width: 90%;
     margin: 0 auto;
   }
 
+  header{
+    padding: 2rem;
+  }
+  
+  h1{
+    font-size: 3.2rem;
+  }
+  
+
   .answers button {
     width: 35%;
     margin: 2rem 1rem;
+    padding: 2rem;
+  }
+
+  footer{
     padding: 2rem;
   }
 
@@ -226,7 +245,47 @@ footer .icon {
   .dot2 {
     height: 40rem;
     width: 40rem;
-    top: 50rem;
+    bottom: 0;
   }
 }
-/********* END TABLET AND LOWER STYLES ************/
+/********* END TABLET/MOBILE STYLES ************/
+
+/********* SMALL MOBILE STYLES ************/
+@media only screen and (max-width: 450px) {
+
+  .trivia{
+    margin: 3rem auto 5rem;
+  }
+
+  .question{
+    padding: 2rem 1rem;
+  }
+
+  .answers button{
+    width: 100%;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .score{
+    width: 80%;
+    padding: 2rem 3rem;
+  }
+}
+/********* END SMALL MOBILE STYLES ************/
+
+
+
+/********* BIG SCREEN STYLES ************/
+@media only screen and (min-width: 2500px) {
+  .question{
+    min-width: 80vw;
+  }
+  .score{
+    min-width: 70vw;
+    padding: 10rem;
+  }
+  footer{
+    padding: 7rem 0;
+  }
+}
