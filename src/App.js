@@ -1,12 +1,11 @@
 // TO DO, FIX, UPDATE
 // 1. Randomize questions within the 10 of 20 but don't let repeat
-// 2. Fix layout movement when "next Question" button pops up
-// 3. Properly style Score display
 
 import React, { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Questionnaire from "./Components/Questionnaire";
+import Score from "./Components/Score";
 
 export default function App() {
   const [questions, setQuestions] = useState([]);
@@ -18,15 +17,12 @@ export default function App() {
     fetch("/Apprentice_TandemFor400_Data.json")
       .then((res) => res.json())
       .then((data) => {
-        //stop answers from re-rendering after click
-        const questions = data.trivia.map((question) => //.trivia changes on json name
-        ({
+        const questions = data.trivia.map((question) => ({
           ...question,
-          answers: [
-            question.correct,
-            ...question.incorrect,
-          ].sort(() => Math.random() - 0.5),
-        }))
+          answers: [question.correct, ...question.incorrect].sort(
+            () => Math.random() - 0.5
+          )
+        }));
 
         setQuestions(questions);
       });
@@ -43,7 +39,7 @@ export default function App() {
     setShowAnswers(true);
   };
 
-  const handelNextQuestion = () => {
+  const handleNextQuestion = () => {
     setShowAnswers(false);
 
     setCurrentIndex(currentIndex + 1);
@@ -51,15 +47,18 @@ export default function App() {
 
   return (
     <div className="container">
+      <span className="dot1"></span>
+      <span className="dot2"></span>
       <Header />
       {currentIndex >= 10 ? (
-        <h2>Game over! Your score is {score}</h2>
+        <Score score={score} />
       ) : questions.length > 0 ? (
         <Questionnaire
           data={questions[currentIndex]}
           showAnswers={showAnswers}
           handleAnswer={handleAnswer}
-          handelNextQuestion={handelNextQuestion}
+          handleNextQuestion={handleNextQuestion}
+          currentIndex={currentIndex}
         />
       ) : (
         <p>Loading Questions...</p>

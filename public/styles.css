@@ -44,6 +44,7 @@ body {
   height: 100vh;
 }
 
+/* FONT SIZE */
 h1,
 h2,
 h3,
@@ -53,7 +54,7 @@ h5 {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 5.2rem;
 }
 h2 {
   font-size: 2.4rem;
@@ -66,6 +67,7 @@ p,
 button {
   font-size: 1.5rem;
 }
+/* END FONT SIZE */
 
 header {
   position: absolute;
@@ -78,6 +80,10 @@ header {
   text-align: center;
 }
 
+.questionCount {
+  font-size: 2rem;
+}
+
 .question {
   background-color: var(--lightGreen);
   padding: 5rem;
@@ -86,7 +92,9 @@ header {
 }
 
 .question p {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 .answers {
@@ -104,7 +112,7 @@ header {
   font-weight: bolder;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 var(--black);
-  outline-color:var(--black);
+  outline-color: var(--black);
 }
 
 /* .answers button:hover{
@@ -142,6 +150,22 @@ header {
   color: var(--lightGreen);
 }
 
+.gameOver {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.score {
+  font-size: 5rem;
+  font-weight: bold;
+  background-color: var(--lightGreen);
+  padding: 2rem 10rem;
+  margin: 2rem auto;
+  text-align: center;
+  border-radius: 1rem;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -158,7 +182,51 @@ footer .icon {
   vertical-align: middle;
 }
 
-/* 
-Tailwind: p-4 = 1rem = 20px 
-Me: p-4 = 2rem = 20px
-*/
+/* DECORATION */
+.dot1 {
+  height: 50rem;
+  width: 50rem;
+  background-color: var(--brightYellow);
+  border-radius: 50%;
+  position: absolute;
+  top: 5rem;
+  left: -15rem;
+  z-index: -1;
+}
+
+.dot2 {
+  height: 50rem;
+  width: 50rem;
+  background-color: var(--red);
+  border-radius: 50%;
+  position: absolute;
+  top: 40rem;
+  right: -25rem; /*https://support.google.com/chrome/thread/13698121?hl=en*/
+  z-index: -1;
+}
+/* END DECORATION */
+
+/********* TABLET AND LOWER STYLES ************/
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .answers button {
+    width: 35%;
+    margin: 2rem 1rem;
+    padding: 2rem;
+  }
+
+  .dot1 {
+    height: 40rem;
+    width: 40rem;
+  }
+  .dot2 {
+    height: 40rem;
+    width: 40rem;
+    top: 50rem;
+  }
+}
+/********* END TABLET AND LOWER STYLES ************/

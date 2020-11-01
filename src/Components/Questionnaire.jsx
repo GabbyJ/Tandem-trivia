@@ -3,12 +3,13 @@ import React from "react";
 export default function Questionnaire({
   showAnswers,
   handleAnswer,
-  handelNextQuestion,
+  handleNextQuestion,
+  currentIndex,
   data: { question, correct, answers }
 }) {
-  
   return (
     <section className="trivia">
+      <p className="questionCount">{currentIndex + 1}/10</p>
       <div className="question">
         <p>{question}</p>
       </div>
@@ -31,7 +32,7 @@ export default function Questionnaire({
         })}
       </div>
       {showAnswers && (
-        <button onClick={handelNextQuestion} className="next">
+        <button onClick={handleNextQuestion} className="next">
           Next Question
         </button>
       )}
