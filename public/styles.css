@@ -26,8 +26,8 @@
   --lightGreen: #e4f2e4; /*buttons on white background, sometimes background with black words*/
   --greenishWhite: #fbfbf5; /*nav background with logoGreen and black words*/
   --darkGreen: #2c4023; /*button outlines*/
-  --brightYellow: #ffff23; /*accent color in random spots*/
-  --red: #f36e5b; /*accent color in random spots*/
+  --brightYellow: #FDDF02; /*accent color in random spots*/
+  --red: #f36e5a; /*accent color in random spots*/
   --offWhite: #fff4e6; /*background color with black or logoGreen*/
   --white: #fffdfc; /*main background*/
   --black: #333333; /*main words*/
@@ -60,7 +60,7 @@ h3 {
 }
 
 p,
-button {
+button, a {
   font-size: 1.5rem;
 }
 /* END FONT SIZE */
@@ -215,6 +215,17 @@ footer .icon {
   vertical-align: middle;
 }
 
+footer a{
+  text-decoration: underline;
+  color: var(--logoGreen);
+  background-color: none;
+}
+
+footer a:hover{
+  background-color: var(--brightYellow);
+  
+}
+
 /* DECORATION */
 
 .dot1 {
@@ -326,6 +337,9 @@ footer .icon {
   .score{
     width: 80%;
     padding: 2rem 3rem;
+  }
+  .scoreZero{
+    padding: 2rem;
   }
 
   .dot1, .dot2 {
