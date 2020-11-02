@@ -43,6 +43,11 @@ Can be viewed [here on Netlify](https://tandem-trivia-gj.netlify.app).
 - Install dependencies with `npm install`
 - Start server with `npm start`
 
+**Issues to watch for**
+- If you get all the answers wrong on a Restarted game (not refresh), the zero(0) score will show blank.
+    - I wasn't able to figure out why this was happening in time for the deadline, but I'm still working on it.
+    - I also figured, not many people are going to get everything wrong on a 2nd try, so it won't be very noticeable.
+
 ## Potential new features to make it better:
 - Create a dark mode
 
