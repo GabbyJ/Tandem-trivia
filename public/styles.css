@@ -81,6 +81,22 @@ header{
   padding: 4rem;
   text-align: center;
   min-height: 15vh;
+  display: inline-block;
+}
+
+header img{
+  float: left;
+  width: 10rem;
+}
+
+.welcome p{
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.welcome button{
+  margin-top: 10rem;
 }
 
 .questionCount {
@@ -117,7 +133,12 @@ header{
   font-weight: bolder;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 var(--black);
-  outline-color: var(--black);
+  outline:0;
+}
+
+.answers button:focus{
+  box-shadow: 5px 5px 3px 1px rgba(51, 51, 51, 0.24); 
+  transform: translateY(2px);
 }
 
 /* .answers button:hover{
@@ -135,7 +156,7 @@ header{
   border: 1px solid var(--red);
 }
 
-.next {
+.next, .restart, .start {
   font-size: 1.8rem;
   background-color: var(--lightGreen);
   border: 4px solid var(--darkGreen);
@@ -150,7 +171,7 @@ header{
   outline-color: var(--darkGreen);
 }
 
-.next:hover {
+.next:hover, .restart:hover, .start:hover {
   background-color: var(--darkGreen);
   color: var(--lightGreen);
 }
@@ -161,7 +182,7 @@ header{
   text-align: center;
 }
 
-.score {
+.score, .scoreZero {
   font-size: 5rem;
   font-weight: bold;
   background-color: var(--lightGreen);
@@ -169,6 +190,14 @@ header{
   margin: 2rem auto;
   text-align: center;
   border-radius: 1rem;
+}
+
+.scoreZero{
+  font-size: 3rem;
+}
+
+.restart{
+  margin-top: 10rem
 }
 
 footer{
@@ -212,6 +241,28 @@ footer .icon {
 
 /* END DECORATION */
 
+/********* BIG SCREEN STYLES ************/
+@media only screen and (min-width: 2500px) {
+  header h1{
+    margin-top: 6rem;
+    font-size: 7rem;
+  }
+  header h3{
+    font-size: 4rem;
+    margin-left: 10rem;
+  }
+  .question{
+    min-width: 80vw;
+  }
+  .score, .scoreZero{
+    min-width: 70vw;
+    padding: 10rem;
+  }
+  footer{
+    padding: 7rem 0;
+  }
+}
+
 /********* TABLET/MOBILE STYLES ************/
 @media only screen and (max-width: 1100px) {
   .container{
@@ -226,8 +277,6 @@ footer .icon {
   h1{
     font-size: 3.2rem;
   }
-  
-
   .answers button {
     width: 35%;
     margin: 2rem 1rem;
@@ -238,14 +287,9 @@ footer .icon {
     padding: 2rem;
   }
 
-  .dot1 {
+  .dot1, .dot2 {
     height: 40rem;
     width: 40rem;
-  }
-  .dot2 {
-    height: 40rem;
-    width: 40rem;
-    bottom: 0;
   }
 }
 /********* END TABLET/MOBILE STYLES ************/
@@ -253,6 +297,14 @@ footer .icon {
 /********* SMALL MOBILE STYLES ************/
 @media only screen and (max-width: 450px) {
 
+  header img{
+    width: 3rem;
+  }
+  header h3{
+    margin-left: 3rem;
+    font-size: 1.5rem;
+  }
+  
   .trivia{
     margin: 3rem auto 5rem;
   }
@@ -267,25 +319,21 @@ footer .icon {
     padding: 1.5rem;
   }
 
+  .next{
+    width: 80%;
+  }
+
   .score{
     width: 80%;
     padding: 2rem 3rem;
+  }
+
+  .dot1, .dot2 {
+    height: 35rem;
+    width: 35rem;
   }
 }
 /********* END SMALL MOBILE STYLES ************/
 
 
 
-/********* BIG SCREEN STYLES ************/
-@media only screen and (min-width: 2500px) {
-  .question{
-    min-width: 80vw;
-  }
-  .score{
-    min-width: 70vw;
-    padding: 10rem;
-  }
-  footer{
-    padding: 7rem 0;
-  }
-}

@@ -1,11 +1,13 @@
 // TO DO, FIX, UPDATE
 // 1. Randomize questions within the 10 of 20 but don't let repeat
+//2. Score 0 shows blank instead of 0
 
 import React, { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Questionnaire from "./Components/Questionnaire";
 import Score from "./Components/Score";
+import Welcome from "./Components/Welcome";
 
 export default function App() {
   const [questions, setQuestions] = useState([]);
@@ -61,11 +63,7 @@ export default function App() {
         
         
         { currentIndex === null ? (
-          <div>
-          <p>Welcome to trivia!</p>
-          <button
-            onClick={() =>startGame()}>Start</button>
-          </div>
+          <Welcome startGame={startGame}/>
         ):(
           currentIndex >= 10 ? (
             <Score score={score} restartGame={restartGame} />
