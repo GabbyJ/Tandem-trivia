@@ -31,6 +31,8 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-color: var(--offWhite);
   color: var(--black);
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
     /* Font Sizes */
@@ -357,6 +359,7 @@ footer a:hover {
   .dot2 {
     height: 35rem;
     width: 35rem;
+    overflow-x: hidden;
   }
 }
 /********* END SMALL MOBILE STYLES ************/
