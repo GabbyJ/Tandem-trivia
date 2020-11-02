@@ -1,4 +1,4 @@
-/* CLEAR DEFAULT STYLES */
+/* Clear Default Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,34 +6,23 @@
   box-sizing: border-box;
   font-size: 62.5%;
 }
-/* CLEAR DEFAULT STYLES */
+/* END Clear Default Styles */
 
-/* FONT */
-@font-face {
-  font-family: rational;
-  src: url("./font/rationaltwtextdemo-light.otf");
-}
-
-@font-face {
-  font-family: rational-bold;
-  src: url("./font/rationaltwtextdemo-semibold.otf");
-}
-/* END FONT */
-
-/* COLORS */
+/* Colors */
 :root {
   --logoGreen: #717245; /*logo (h1) on offWhite or greenishWhite*/
   --lightGreen: #e4f2e4; /*buttons on white background, sometimes background with black words*/
   --greenishWhite: #fbfbf5; /*nav background with logoGreen and black words*/
   --darkGreen: #2c4023; /*button outlines*/
-  --brightYellow: #FDDF02; /*accent color in random spots*/
+  --brightYellow: #fddf02; /*accent color in random spots*/
   --red: #f36e5a; /*accent color in random spots*/
   --offWhite: #fff4e6; /*background color with black or logoGreen*/
   --white: #fffdfc; /*main background*/
   --black: #333333; /*main words*/
 }
-/* END COLORS */
+/* END Colors */
 
+/* General Styles */
 body {
   font-family: "Courier New", Courier, monospace;
   background-color: var(--offWhite);
@@ -41,6 +30,7 @@ body {
   overflow-x: hidden;
 }
 
+    /* Font Sizes */
 h1,
 h2,
 h3,
@@ -60,21 +50,22 @@ h3 {
 }
 
 p,
-button, a {
+button,
+a {
   font-size: 1.5rem;
 }
-/* END FONT SIZE */
+    /* END Font Sizes */
 
-
-
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 75vh;
 }
+/* END General Styles */
 
-header{
+/* Header */
+header {
   width: 100%;
   background-color: var(--greenishWhite);
   color: var(--logoGreen);
@@ -83,22 +74,26 @@ header{
   min-height: 15vh;
   display: inline-block;
 }
+/* END Header */
 
-header img{
+header img {
   float: left;
   width: 10rem;
 }
 
-.welcome p{
+/* Welcome Screen */
+.welcome p {
   font-size: 5rem;
   font-weight: bold;
   text-align: center;
 }
 
-.welcome button{
+.welcome button {
   margin-top: 10rem;
 }
+/* END Welcome Screen */
 
+/* Question Box */
 .questionCount {
   font-size: 2rem;
 }
@@ -116,7 +111,9 @@ header img{
   text-align: center;
   font-weight: bold;
 }
+/* END Question Box */
 
+/* Answer Buttons */
 .answers {
   display: flex;
   flex-wrap: wrap;
@@ -133,11 +130,11 @@ header img{
   font-weight: bolder;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 var(--black);
-  outline:0;
+  outline: 0;
 }
 
-.answers button:focus{
-  box-shadow: 5px 5px 3px 1px rgba(51, 51, 51, 0.24); 
+.answers button:focus {
+  box-shadow: 5px 5px 3px 1px rgba(51, 51, 51, 0.24);
   transform: translateY(2px);
 }
 
@@ -155,8 +152,12 @@ header img{
   color: var(--red);
   border: 1px solid var(--red);
 }
+/* END Answer Buttons */
 
-.next, .restart, .start {
+/* Action Buttons */
+.next,
+.restart,
+.start {
   font-size: 1.8rem;
   background-color: var(--lightGreen);
   border: 4px solid var(--darkGreen);
@@ -171,18 +172,23 @@ header img{
   outline-color: var(--darkGreen);
 }
 
-.next:hover, .restart:hover, .start:hover {
+.next:hover,
+.restart:hover,
+.start:hover {
   background-color: var(--darkGreen);
   color: var(--lightGreen);
 }
+/* END Action Buttons */
 
+/* Game Over Screen */
 .gameOver {
   font-size: 5rem;
   font-weight: bold;
   text-align: center;
 }
 
-.score, .scoreZero {
+.score,
+.scoreZero {
   font-size: 5rem;
   font-weight: bold;
   background-color: var(--lightGreen);
@@ -192,15 +198,17 @@ header img{
   border-radius: 1rem;
 }
 
-.scoreZero{
+.scoreZero {
   font-size: 3rem;
 }
 
-.restart{
-  margin-top: 10rem
+.restart {
+  margin-top: 10rem;
 }
+/* END Game Over Screen */
 
-footer{
+/* Footer */
+footer {
   width: 100%;
   background-color: var(--greenishWhite);
   color: var(--logoGreen);
@@ -215,19 +223,18 @@ footer .icon {
   vertical-align: middle;
 }
 
-footer a{
+footer a {
   text-decoration: underline;
   color: var(--logoGreen);
   background-color: none;
 }
 
-footer a:hover{
+footer a:hover {
   background-color: var(--brightYellow);
-  
 }
+/* END Footer */
 
-/* DECORATION */
-
+/* Decoration */
 .dot1 {
   height: 50rem;
   width: 50rem;
@@ -249,43 +256,44 @@ footer a:hover{
   right: -25rem;
   z-index: -1;
 }
-
-/* END DECORATION */
+/* END Decoration */
 
 /********* BIG SCREEN STYLES ************/
 @media only screen and (min-width: 2500px) {
-  header h1{
+  header h1 {
     margin-top: 6rem;
     font-size: 7rem;
   }
-  header h3{
+  header h3 {
     font-size: 4rem;
     margin-left: 10rem;
   }
-  .question{
+  .question {
     min-width: 80vw;
   }
-  .score, .scoreZero{
+  .score,
+  .scoreZero {
     min-width: 70vw;
     padding: 10rem;
   }
-  footer{
+  footer {
     padding: 7rem 0;
   }
 }
+/********* END BIG SCREEN STYLES ************/
 
 /********* TABLET/MOBILE STYLES ************/
 @media only screen and (max-width: 1100px) {
-  .container{
+  .container {
     width: 90%;
     margin: 0 auto;
   }
 
-  header{
+  header {
     padding: 2rem;
   }
-  
-  h1{
+
+  h1 {
     font-size: 3.2rem;
   }
   .answers button {
@@ -294,11 +302,12 @@ footer a:hover{
     padding: 2rem;
   }
 
-  footer{
+  footer {
     padding: 2rem;
   }
 
-  .dot1, .dot2 {
+  .dot1,
+  .dot2 {
     height: 40rem;
     width: 40rem;
   }
@@ -307,47 +316,44 @@ footer a:hover{
 
 /********* SMALL MOBILE STYLES ************/
 @media only screen and (max-width: 450px) {
-
-  header img{
+  header img {
     width: 3rem;
   }
-  header h3{
+  header h3 {
     margin-left: 3rem;
     font-size: 1.5rem;
   }
-  
-  .trivia{
+
+  .trivia {
     margin: 3rem auto 5rem;
   }
 
-  .question{
+  .question {
     padding: 2rem 1rem;
   }
 
-  .answers button{
+  .answers button {
     width: 100%;
     margin: 1rem;
     padding: 1.5rem;
   }
 
-  .next{
+  .next {
     width: 80%;
   }
 
-  .score{
+  .score {
     width: 80%;
     padding: 2rem 3rem;
   }
-  .scoreZero{
+  .scoreZero {
     padding: 2rem;
   }
 
-  .dot1, .dot2 {
+  .dot1,
+  .dot2 {
     height: 35rem;
     width: 35rem;
   }
 }
 /********* END SMALL MOBILE STYLES ************/
-
-
-

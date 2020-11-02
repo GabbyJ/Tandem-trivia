@@ -1,11 +1,13 @@
-Live site [hosted on Netlify](https://tandem-trivia-gj.netlify.app).
-Built with React and CSS.
+Live site [hosted on Netlify](https://tandem-trivia-gj.netlify.app). Built with React and CSS.
+
+My mockup for the challenge can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4). The design is based off of [Tandem's website](https://madeintandem.com).
 
 ## Project Description
 
+Your goal is to create an application that others will be able to use in order to help improve their trivia skills.
+
 Create an application that displays trivia questions with multiple-choice answers to select from. At minimum, the player can view the question(s), the answer choices, the correct answer upon submission, and their score. Feel free to use whatever framework or language you are comfortable with.
 
-My mockup for the challenge can be found [here via Canva](https://www.canva.com/design/DAEL2zwXYGA/lP7jngFlXWw3_drbHe_Rtw/view?website#4). The design is based off of [Tandem's website](https://madeintandem.com).
 
 ### AC
 
@@ -40,10 +42,9 @@ Can be viewed [here on Netlify](https://tandem-trivia-gj.netlify.app).
 - Clone the repo using `git clone https://github.com/GabbyJ/Tandem-trivia.git`
 - Install dependencies with `npm install`
 - Start server with `npm start`
-<!-- ## Issues/Complexities to look out for: -->
 
 ## Potential new features to make it better:
-- Add a play again/restart option at the end of game
+- Create a dark mode
 
 ## 
 

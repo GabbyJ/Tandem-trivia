@@ -5,7 +5,7 @@ export default function Questionnaire({
   handleAnswer,
   handleNextQuestion,
   currentIndex,
-  data: { question, correct, answers }
+  data: { question, correct, answers },
 }) {
   return (
     <section className="trivia">

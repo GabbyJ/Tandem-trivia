@@ -6,19 +6,24 @@ export default function Score({ score, restartGame }) {
       <p className="gameOver">Game over!</p>
       {score === 0 ? (
         <div>
-          <p className="scoreZero">You Scored 0/10 😕<br/><br/>
-          You have some work to do. Want to try again?</p>
+          <p className="scoreZero">
+            You Scored 0/10 😕
+            <br />
+            <br />
+            You have some work to do. Want to try again?
+          </p>
         </div>
       ) : (
         <div>
           <p className="score">
-          You Scored <br /> {score}/10
+            You Scored <br /> {score}/10
           </p>
-      </div>
-        
+        </div>
       )}
-      
-      <button className="restart" onClick={() => restartGame()}>Restart</button>
+
+      <button className="restart" onClick={() => restartGame()}>
+        Restart
+      </button>
     </div>
   );
 }

@@ -66,7 +66,7 @@
     "correct": "The Moon"
   },
   {
-    "question": "Which artist painted 'Girl with a Pearl Earrin'?",
+    "question": "Which artist painted 'Girl with a Pearl Earring'?",
     "incorrect": ["Van Gogh", "Picasso", "Da Vinci"],
     "correct": "Vermeer"
   },
@@ -103,7 +103,7 @@
   {
     "question": "The Vatican bank has the only ATM in the world that allows users to do what?",
     "incorrect": [
-      "Receive withdrawls in rosary beads",
+      "Receive withdrawals in rosary beads",
       "Vote for the Pope",
       "Purchase indulgences"
     ],
