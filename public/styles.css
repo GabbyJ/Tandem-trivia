@@ -23,7 +23,7 @@
 /* END Colors */
 
 /* General Styles */
-html, body{
+html, body, #root{
   overflow-x: hidden;
 }
 
